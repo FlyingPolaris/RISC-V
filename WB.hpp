@@ -37,7 +37,7 @@ void WB::writeback()
 	if (type != 'B' && type != 'S')
 	{
 		bool flag = true;
-		if (opcode == 0b0010011 && (func3 == 001 || func3 == 101))
+		if (opcode == 0b0010011 && (func3 == 0b001 || func3 == 0b101))
 		{
 			if (imm >> 5 != 0) flag = false;
 		}
