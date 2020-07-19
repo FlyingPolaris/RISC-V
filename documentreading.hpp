@@ -18,43 +18,52 @@ uint getnum(char ch)
 
 void documentreading()
 {
-	//ifstream fin("pi.data");
-	char s[50];
+	//ifstream fin("expr.data");
+	char ch;
 	uint nexad;
+	//fin >> ch;
 	int p = 0;
-	while (cin.getline(s, sizeof(s)))
+	while (cin>>ch)
 	{
-		if (s[0] == '@')
+		if (ch == '@')
 		{
 			p = 0;
 			int tmp = 1;
 			uint num;
 			nexad = 0;
+			char s[9];
+			for (int i = 1;i <= 8;++i)
+			{
+				cin >> ch;
+				s[i] = ch;
+			}
 			for (int i = 8;i >= 1;--i)
 			{
 				num = getnum(s[i]);
 				nexad += num * tmp;
 				tmp <<= 4;
 			}
+			while ((~ch) && (!isupper(ch)) && (!isdigit(ch)) && (ch != '@')) 
+				cin >> ch;
 		}
 		else
 		{
-			p = 0;
 			int i = nexad;
-			while (s[p] != '\0')
-			{
-				uint num1, num2, num;
-				num1 = getnum(s[p++]);
-				num2 = getnum(s[p++]);
-				if (s[p] == ' ') p++;
-				num = (num1 << 4) + num2;
-				MEM.writedata(num, i++);
-				nexad += 1;
-			}
+			uint num1, num2, num;
+			num1 = getnum(ch);
+			cin >> ch;
+			num2 = getnum(ch);
+			num = (num1 << 4) + num2;
+			MEM.writedata(num, i++);
+			nexad += 1;
+			while ((~ch) && (!isupper(ch)) && (!isdigit(ch) && (ch != '@'))) 
+				cin >> ch;
 		}
 	}
 	//fin.close();
 }
+
+#endif
 
 
 
