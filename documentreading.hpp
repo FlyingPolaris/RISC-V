@@ -64,8 +64,3 @@ void documentreading()
 }
 
 #endif
-
-
-
-
-#endif
