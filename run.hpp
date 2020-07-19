@@ -13,7 +13,6 @@
 #define __RUN__
 
 
-
 class run
 {
 private:
@@ -22,7 +21,7 @@ private:
 	EX _EX;
 	MEm _MEM;
 	WB _WB;
-	//int count = 0;
+	int count = 0;
 public:
 	/*void series_connection()
 	{
@@ -101,7 +100,7 @@ public:
 			//_EX.get(_ID);
 			//_ID.get(_IF);
 
-			if (end()) break;
+			//if (end()) break;
 		}
 		uint rd = getrd(0x0ff00513u);
 		uint num = REG.readreg(rd);
