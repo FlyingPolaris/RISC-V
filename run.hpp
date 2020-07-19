@@ -22,7 +22,7 @@ private:
 	EX _EX;
 	MEm _MEM;
 	WB _WB;
-	int count = 0;
+	//int count = 0;
 public:
 	/*void series_connection()
 	{
