@@ -1,5 +1,5 @@
 #include "typedef.hpp"
-#include <string>
+#include <cstring>
 
 
 #ifndef __HARDWARE__
