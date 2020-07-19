@@ -96,11 +96,11 @@ public:
 		}
 		uint rd = getrd(0x0ff00513u);
 		uint num = REG.readreg(rd);
-		if (history.totalcount != 0)
-		{
-			cout << "successful: "<<(history.successfulcount) << "  total: " << (history.totalcount)<<'\n';
-			cout << 100 * (double)(history.successfulcount) / (double)(history.totalcount) << '%' << '\n';
-		}
+		//if (history.totalcount != 0)
+		//{
+		//	cout << "successful: "<<(history.successfulcount) << "  total: " << (history.totalcount)<<'\n';
+		//	cout << 100 * (double)(history.successfulcount) / (double)(history.totalcount) << '%' << '\n';
+		//}
 		cout << (num & 255u);
 	}
 	bool end();
