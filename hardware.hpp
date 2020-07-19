@@ -5,7 +5,7 @@
 #ifndef __HARDWARE__
 #define __HARDWARE__
 
-const int MAXSIZE = 1e6;
+const int MAXSIZE = 1e4;
 bool PRINT = false;
 
 class reg 
