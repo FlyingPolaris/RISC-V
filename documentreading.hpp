@@ -19,7 +19,7 @@ uint getnum(char ch)
 void documentreading()
 {
 	//ifstream fin("pi.data");
-	char s[200];
+	char s[50];
 	uint nexad;
 	int p = 0;
 	while (cin.getline(s, sizeof(s)))
