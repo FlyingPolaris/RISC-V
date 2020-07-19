@@ -14,7 +14,7 @@ private:
 	uint pc;
 	uint x[32];
 public:
-	int pcjump = 0;
+	//int pcjump = 0;
 	reg()
 	{
 		pc = 0;
